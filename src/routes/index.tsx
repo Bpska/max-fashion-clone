@@ -6,8 +6,8 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "Max Fashion — Shop Latest Styles for Women, Men & Kids" },
-      { name: "description", content: "Explore new arrivals, summer edits and ethnic wear at Max Fashion. Flat ₹300 off on ₹1999 with code MAX300." },
+      { title: "Rhodium — Shop Latest Styles for Women, Men & Kids" },
+      { name: "description", content: "Explore new arrivals, summer edits and ethnic wear at Rhodium. Flat ₹300 off on ₹1999 with code RHODIUM300." },
     ],
   }),
 });

@@ -9,7 +9,7 @@ export const Route = createFileRoute("/product/$id")({
   component: ProductPage,
   head: ({ params }) => {
     const p = getProduct(params.id);
-    return { meta: [{ title: `${p.name} — Max Fashion` }, { name: "description", content: `Buy ${p.name} at ₹${p.price}.` }, { property: "og:image", content: p.image }] };
+    return { meta: [{ title: `${p.name} — Rhodium` }, { name: "description", content: `Buy ${p.name} at ₹${p.price}.` }, { property: "og:image", content: p.image }] };
   },
 });
 

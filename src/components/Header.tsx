@@ -21,7 +21,7 @@ export function Header() {
       <div className="border-b" style={{ borderColor: "#E0E0E0" }}>
         <div className="max-container h-16 flex items-center justify-between gap-4">
           <Link to="/" className="flex items-center">
-            <span style={{ background: "#E31E24" }} className="text-white font-extrabold text-2xl px-3 py-1 leading-none tracking-wider">MAX</span>
+            <span style={{ background: "#E31E24" }} className="text-white font-extrabold text-2xl px-3 py-1 leading-none tracking-wider">RHODIUM</span>
           </Link>
 
           <div className="hidden md:flex items-center flex-1 max-w-[420px] mx-8 h-10 px-3 rounded-sm" style={{ background: "#F5F5F5", border: "1px solid #E0E0E0" }}>

@@ -74,10 +74,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Max Fashion — Trendy Styles for the Whole Family" },
+      { title: "Rhodium — Trendy Styles for the Whole Family" },
       { name: "description", content: "Shop the latest fashion for women, men and kids at Max — value-for-money styles, free shipping over ₹699." },
-      { name: "author", content: "Max Fashion" },
-      { property: "og:title", content: "Max Fashion India" },
+      { name: "author", content: "Rhodium" },
+      { property: "og:title", content: "Rhodium India" },
       { property: "og:description", content: "India's leading value fashion brand." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

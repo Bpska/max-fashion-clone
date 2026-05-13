@@ -3,5 +3,5 @@ import { CategoryView } from "@/components/CategoryView";
 
 export const Route = createFileRoute("/women")({
   component: () => <CategoryView title="Women" breadcrumb="Women" />,
-  head: () => ({ meta: [{ title: "Women's Fashion — Max" }, { name: "description", content: "Shop the latest women's fashion at Max." }] }),
+  head: () => ({ meta: [{ title: "Women's Fashion — Rhodium" }, { name: "description", content: "Shop the latest women's fashion at Rhodium." }] }),
 });
