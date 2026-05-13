@@ -10,6 +10,8 @@ export default defineConfig({
     tanstackStart({
       server: {
         entry: "src/server.ts",
+        // Use Vercel preset on Vercel, Node locally
+        preset: (process.env.VERCEL === "1" ? "vercel" : process.env.NITRO_PRESET) ?? "node",
       },
     }),
     react(),
