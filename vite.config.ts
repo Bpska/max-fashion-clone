@@ -1,23 +1,13 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { tanstackStart } from "@tanstack/react-start/plugin/vite";
+import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import tailwindcss from "@tailwindcss/vite";
-import { cloudflare } from "@cloudflare/vite-plugin";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ command }) => ({
+export default defineConfig({
   plugins: [
-    command === "build"
-      ? cloudflare({
-          persistState: false,
-        })
-      : undefined,
-    tanstackStart({
-      server: {
-        entry: "src/server.ts",
-      },
-    }),
+    TanStackRouterVite(),
     react(),
     tailwindcss(),
     tsconfigPaths(),
@@ -26,4 +16,4 @@ export default defineConfig(({ command }) => ({
     host: "::",
     port: 8080,
   },
-}));
+});
