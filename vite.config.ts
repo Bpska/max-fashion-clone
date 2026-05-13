@@ -6,11 +6,13 @@ import tailwindcss from "@tailwindcss/vite";
 import { cloudflare } from "@cloudflare/vite-plugin";
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [
-    cloudflare({
-      persistState: false,
-    }),
+    command === "build"
+      ? cloudflare({
+          persistState: false,
+        })
+      : undefined,
     tanstackStart({
       server: {
         entry: "src/server.ts",
@@ -24,4 +26,4 @@ export default defineConfig({
     host: "::",
     port: 8080,
   },
-});
+}));

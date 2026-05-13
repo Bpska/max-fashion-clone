@@ -1,10 +1,9 @@
-@import "tailwindcss" source(none);
-@source "../src";
+@import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --dark-mode: class;
   --color-brand-red: #E31E24;
   --color-site-black: #000000;
   --color-site-white: #FFFFFF;
