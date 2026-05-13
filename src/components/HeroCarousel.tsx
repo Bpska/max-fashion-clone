@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
   { img: "https://picsum.photos/seed/fashion1/1280/480", title: "NEW ARRIVALS — SUMMER 2025", cta: "SHOP NOW" },
-  { img: "https://picsum.photos/seed/sport2/1280/480", title: "MAX SPORT — BUILT FOR PERFORMANCE", cta: "EXPLORE NOW" },
+  { img: "https://picsum.photos/seed/sport2/1280/480", title: "RHODIUM SPORT — BUILT FOR PERFORMANCE", cta: "EXPLORE NOW" },
   { img: "https://picsum.photos/seed/kids3/1280/480", title: "KIDS FEST — UP TO 50% OFF", cta: "SHOP KIDS" },
   { img: "https://picsum.photos/seed/ethnic4/1280/480", title: "ETHNIC EDIT — KURTAS & SUITS", cta: "SHOP ETHNIC" },
 ];

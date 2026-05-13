@@ -3,7 +3,7 @@ import { CategoryView } from "@/components/CategoryView";
 
 export const Route = createFileRoute("/search")({
   component: SearchPage,
-  head: () => ({ meta: [{ title: "Search — Max Fashion" }] }),
+  head: () => ({ meta: [{ title: "Search — Rhodium" }] }),
 });
 
 function SearchPage() {
