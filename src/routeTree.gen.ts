@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WomenRouteImport } from './routes/women'
+import { Route as WishlistRouteImport } from './routes/wishlist'
 import { Route as SearchRouteImport } from './routes/search'
 import { Route as MenRouteImport } from './routes/men'
 import { Route as KidsRouteImport } from './routes/kids'
@@ -20,6 +21,11 @@ import { Route as ProductIdRouteImport } from './routes/product.$id'
 const WomenRoute = WomenRouteImport.update({
   id: '/women',
   path: '/women',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WishlistRoute = WishlistRouteImport.update({
+  id: '/wishlist',
+  path: '/wishlist',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SearchRoute = SearchRouteImport.update({
@@ -59,6 +65,7 @@ export interface FileRoutesByFullPath {
   '/kids': typeof KidsRoute
   '/men': typeof MenRoute
   '/search': typeof SearchRoute
+  '/wishlist': typeof WishlistRoute
   '/women': typeof WomenRoute
   '/product/$id': typeof ProductIdRoute
 }
@@ -68,6 +75,7 @@ export interface FileRoutesByTo {
   '/kids': typeof KidsRoute
   '/men': typeof MenRoute
   '/search': typeof SearchRoute
+  '/wishlist': typeof WishlistRoute
   '/women': typeof WomenRoute
   '/product/$id': typeof ProductIdRoute
 }
@@ -78,6 +86,7 @@ export interface FileRoutesById {
   '/kids': typeof KidsRoute
   '/men': typeof MenRoute
   '/search': typeof SearchRoute
+  '/wishlist': typeof WishlistRoute
   '/women': typeof WomenRoute
   '/product/$id': typeof ProductIdRoute
 }
@@ -89,10 +98,19 @@ export interface FileRouteTypes {
     | '/kids'
     | '/men'
     | '/search'
+    | '/wishlist'
     | '/women'
     | '/product/$id'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/cart' | '/kids' | '/men' | '/search' | '/women' | '/product/$id'
+  to:
+    | '/'
+    | '/cart'
+    | '/kids'
+    | '/men'
+    | '/search'
+    | '/wishlist'
+    | '/women'
+    | '/product/$id'
   id:
     | '__root__'
     | '/'
@@ -100,6 +118,7 @@ export interface FileRouteTypes {
     | '/kids'
     | '/men'
     | '/search'
+    | '/wishlist'
     | '/women'
     | '/product/$id'
   fileRoutesById: FileRoutesById
@@ -110,6 +129,7 @@ export interface RootRouteChildren {
   KidsRoute: typeof KidsRoute
   MenRoute: typeof MenRoute
   SearchRoute: typeof SearchRoute
+  WishlistRoute: typeof WishlistRoute
   WomenRoute: typeof WomenRoute
   ProductIdRoute: typeof ProductIdRoute
 }
@@ -121,6 +141,13 @@ declare module '@tanstack/react-router' {
       path: '/women'
       fullPath: '/women'
       preLoaderRoute: typeof WomenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wishlist': {
+      id: '/wishlist'
+      path: '/wishlist'
+      fullPath: '/wishlist'
+      preLoaderRoute: typeof WishlistRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/search': {
@@ -174,6 +201,7 @@ const rootRouteChildren: RootRouteChildren = {
   KidsRoute: KidsRoute,
   MenRoute: MenRoute,
   SearchRoute: SearchRoute,
+  WishlistRoute: WishlistRoute,
   WomenRoute: WomenRoute,
   ProductIdRoute: ProductIdRoute,
 }
