@@ -109,8 +109,26 @@ function RootShell({ children }: { children: React.ReactNode }) {
   );
 }
 
+import { useEffect } from "react";
+import Lenis from "lenis";
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+
+  // Initialize Lenis for premium smooth cinematic scrolling
+  useEffect(() => {
+    const lenis = new Lenis({
+      autoRaf: true,
+      lerp: 0.08, // Adjust for how buttery smooth the scroll feels (lower is smoother)
+      duration: 1.5, // Used if scroll animation is triggered manually
+      smoothWheel: true,
+      wheelMultiplier: 1.2, // Makes scrolling feel a bit more effortless
+    });
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
