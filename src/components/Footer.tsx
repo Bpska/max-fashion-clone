@@ -12,11 +12,11 @@ import logo from "@/image/2nd-logo.png";
 
 const cols = [
   {
-    title: "WOMEN",
-    links: ["Tops & Blouses", "Dresses", "Bottoms", "Kurtas & Kurtis", "Footwear", "Accessories"],
+    title: "LADIES WEAR",
+    links: ["Short Kurtis", "Long Kurtis", "Sarees", "Dupattas", "Accessories"],
   },
-  { title: "MEN", links: ["T-Shirts", "Shirts", "Trousers & Chinos", "Footwear", "Innerwear"] },
-  { title: "KIDS", links: ["Boys", "Girls", "Infants", "School Wear"] },
+  { title: "MENS WEAR", links: ["Formal Shirts", "Formal Pants", "T-Shirts", "Jeans", "Sports Wear"] },
+  { title: "KIDS WEAR", links: ["Boys (0–7 yrs)", "Girls (0–7 yrs)", "Boys (8–14 yrs)", "Girls (8–14 yrs)"] },
   {
     title: "SUPPORT",
     links: ["Help Centre", "Track Order", "Easy Returns", "Store Locator", "Gift Cards"],
@@ -46,14 +46,11 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-10">
           {/* Brand column */}
           <div className="sm:col-span-2 lg:col-span-2">
-            <img
-              src={logo}
-              alt="Rhodium Logo"
-              className="h-24 w-auto object-contain mb-5"
-              style={{ filter: "brightness(0) invert(1)" }}
-            />
+            <div className="mb-5">
+              <img src={logo} alt="Rhodium" className="h-20 w-auto object-contain" style={{ filter: "brightness(0) invert(1)" }} />
+            </div>
             <p className="text-sm leading-relaxed mb-6" style={{ color: "#AAB8A0" }}>
-              Rhodium is India's leading value fashion brand — trend-forward styles for the entire
+              Rhodium is a premium fashion brand — trend-forward styles for the entire
               family at prices you'll love.
             </p>
             <div className="flex flex-col gap-2 text-sm" style={{ color: "#AAB8A0" }}>
@@ -128,7 +125,7 @@ export function Footer() {
       <div style={{ borderTop: "1px solid #163623", background: "#041009" }}>
         <div className="max-container py-4 flex flex-col sm:flex-row gap-3 items-center justify-between">
           <p className="text-xs text-center" style={{ color: "#5A7060" }}>
-            © 2026 Rhodium India Pvt Ltd &nbsp;|&nbsp; Privacy Policy &nbsp;|&nbsp; Terms of Use
+            © 2026 Rhodium Fashion Pvt Ltd &nbsp;|&nbsp; Privacy Policy &nbsp;|&nbsp; Terms of Use
             &nbsp;|&nbsp; Sitemap
           </p>
           <div className="flex gap-4">

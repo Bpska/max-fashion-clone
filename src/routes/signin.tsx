@@ -12,7 +12,7 @@ function SignIn() {
     <div className="flex justify-center py-16 px-4">
       <div className="w-full max-w-[480px] p-12" style={{ border: "1px solid #E0E0E0", borderRadius: 4 }}>
         <div className="text-center mb-6">
-          <span style={{ background: "#E31E24" }} className="text-white font-extrabold text-2xl px-3 py-1 tracking-wider">RHODIUM</span>
+          <span style={{ background: "#E31E24" }} className="text-white font-extrabold text-2xl px-3 py-1 tracking-wider">MAXFASHION</span>
         </div>
         <div className="flex border-b mb-6" style={{ borderColor: "#E0E0E0" }}>
           {(["signin", "register"] as const).map((t) => (

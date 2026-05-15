@@ -13,7 +13,7 @@ export const Route = createFileRoute("/product/$id")({
     const p = getProduct(params.id);
     return {
       meta: [
-        { title: `${p.name} ??? Rhodium` },
+        { title: `${p.name} — Rhodium` },
         { name: "description", content: `Buy ${p.name} at ???${p.price}.` },
         { property: "og:image", content: p.image },
       ],
@@ -193,7 +193,7 @@ function ProductPage() {
           {/* WhatsApp Order Button */}
           <a
             href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-              `Hi Rhodium! I want to order:\n\n???? *${p.name}*\nSize: ${size}\nColour: ${color}\nQty: ${qty}\nPrice: ???${p.price}\n\nPlease confirm my order.`,
+              `Hi Rhodium! I want to order:\n\n👗 *${p.name}*\nSize: ${size}\nColour: ${color}\nQty: ${qty}\n\nPlease confirm my order.`,
             )}`}
             target="_blank"
             rel="noopener noreferrer"

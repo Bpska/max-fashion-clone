@@ -1,40 +1,45 @@
 import { Link } from "@tanstack/react-router";
 import { useState, useRef } from "react";
 
-type MenuKey = "WOMEN" | "MEN" | "KIDS" | "KIDS FEST" | "SLEEPWEAR" | "GENZ STORE";
+type MenuKey = "KIDS WEAR" | "LADIES WEAR" | "MENS WEAR" | "LADIES INNER WEAR" | "SAREES";
 
 const menuItems: { key: MenuKey; to: string }[] = [
-  { key: "KIDS FEST", to: "/kids" },
-  { key: "WOMEN", to: "/women" },
-  { key: "MEN", to: "/men" },
-  { key: "KIDS", to: "/kids" },
-  { key: "SLEEPWEAR", to: "/women" },
-  { key: "GENZ STORE", to: "/women" },
+  { key: "KIDS WEAR", to: "/kids" },
+  { key: "LADIES WEAR", to: "/women" },
+  { key: "MENS WEAR", to: "/men" },
+  { key: "LADIES INNER WEAR", to: "/women" },
+  { key: "SAREES", to: "/women" },
 ];
 
 const dropdowns: Partial<Record<MenuKey, { title: string; links: string[] }[]>> = {
-  WOMEN: [
-    { title: "Topwear", links: ["T-Shirts", "Tops", "Shirts", "Sweatshirts"] },
-    { title: "Bottomwear", links: ["Jeans", "Trousers", "Skirts", "Shorts"] },
-    { title: "Dresses & Jumpsuits", links: ["Maxi", "Midi", "Mini", "Jumpsuits"] },
-    { title: "Indian Wear", links: ["Kurtas", "Suits", "Sarees", "Dupattas"] },
-    { title: "Sleepwear", links: ["Night Suits", "Robes", "Loungewear"] },
-    { title: "Footwear", links: ["Heels", "Flats", "Sneakers", "Sandals"] },
+  "KIDS WEAR": [
+    { title: "Boys (0–7 yrs)", links: ["T-Shirts", "Shorts", "Jeans", "Shirts"] },
+    { title: "Girls (0–7 yrs)", links: ["Dresses", "Tops", "Skirts", "Frocks"] },
+    { title: "Boys (8–14 yrs)", links: ["T-Shirts", "Jeans", "Joggers", "Hoodies"] },
+    { title: "Girls (8–14 yrs)", links: ["Tops", "Leggings", "Dresses", "Co-ords"] },
   ],
-  MEN: [
-    { title: "T-Shirts", links: ["Polo", "Crew Neck", "V-Neck", "Henley"] },
-    { title: "Shirts", links: ["Casual", "Formal", "Linen", "Printed"] },
-    { title: "Trousers", links: ["Chinos", "Formal", "Casual", "Joggers"] },
+  "LADIES WEAR": [
+    { title: "Short Kurtis", links: ["Printed", "Solid", "Embroidered", "Casual"] },
+    { title: "Long Kurtis", links: ["Anarkali", "Straight", "A-Line", "Designer"] },
+  ],
+  "MENS WEAR": [
+    { title: "Formal Shirts", links: ["Plain", "Checked", "Striped", "Full Sleeve"] },
+    { title: "Formal Pants", links: ["Slim Fit", "Regular Fit", "Pleated", "Chinos"] },
+    { title: "T-Shirts", links: ["Polo", "Crew Neck", "V-Neck", "Printed"] },
     { title: "Jeans", links: ["Slim Fit", "Regular", "Skinny", "Bootcut"] },
-    { title: "Sport", links: ["T-Shirts", "Shorts", "Track Pants"] },
-    { title: "Footwear", links: ["Sneakers", "Loafers", "Sandals", "Formal"] },
+    { title: "Sports Wear", links: ["Track Pants", "Shorts", "Sports Tees", "Joggers"] },
   ],
-  KIDS: [
-    { title: "Boys (0-14 yrs)", links: ["T-Shirts", "Shirts", "Shorts", "Jeans"] },
-    { title: "Girls (0-14 yrs)", links: ["Dresses", "Tops", "Skirts", "Leggings"] },
-    { title: "Infants", links: ["Rompers", "Sets", "Bibs", "Shoes"] },
-    { title: "School Wear", links: ["Uniforms", "Bags", "Shoes"] },
-    { title: "Accessories", links: ["Caps", "Belts", "Bags"] },
+  "LADIES INNER WEAR": [
+    { title: "Bras", links: ["Sports Bra", "T-Shirt Bra", "Padded", "Wired"] },
+    { title: "Panties", links: ["Briefs", "Boyshorts", "Bikini", "Thongs"] },
+    { title: "Camisoles", links: ["Lace", "Spaghetti", "Slip", "Tank"] },
+    { title: "Night Wear", links: ["Night Suits", "Nighty", "Robes", "Loungewear"] },
+  ],
+  "SAREES": [
+    { title: "Cotton Sarees", links: ["Handloom", "Printed", "Plain", "Casual"] },
+    { title: "Silk Sarees", links: ["Banarasi", "Kanjivaram", "Art Silk", "Georgette"] },
+    { title: "Printed Sarees", links: ["Digital Print", "Block Print", "Floral", "Geometric"] },
+    { title: "Party Wear", links: ["Designer", "Embellished", "Embroidered", "Sequin"] },
   ],
 };
 

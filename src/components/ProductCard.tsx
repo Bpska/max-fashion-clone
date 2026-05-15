@@ -66,19 +66,6 @@ export function ProductCard({ product, showMoveToCart }: { product: Product; sho
           </Link>
         </div>
 
-        {/* Pricing */}
-        <div className="flex items-center gap-1.5 mt-1">
-          <span className="text-[15px] font-bold text-[#0F0F0F]">₹{product.price}</span>
-          <span className="text-[12px] line-through text-[#949494]">₹{product.mrp}</span>
-          <span className="text-[12px] font-bold text-[#00B852]">{product.discount}% OFF</span>
-        </div>
-
-        {/* Tribe / Premium Member Badge (Mock functionality for aesthetic) */}
-        <div className="mt-2 inline-block px-1.5 py-0.5 rounded-sm" style={{ border: "1px solid #EAEAEA", background: "#F9F9F9" }}>
-          <p className="text-[10px] font-bold text-[#333]">
-            ₹{Math.floor(product.price * 0.9)} <span className="font-normal text-[#737373]">For TriBe Members</span>
-          </p>
-        </div>
 
         {/* Cart Page specific action */}
         {showMoveToCart && (
