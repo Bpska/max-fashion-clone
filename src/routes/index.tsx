@@ -157,7 +157,7 @@ function CategorySection() {
         <h2 className="section-heading mb-8">Shop by Category</h2>
 
         {/* 5 Main Category Icons Row */}
-        <div className="flex justify-center gap-4 sm:gap-8 flex-wrap mb-8">
+        <div className="flex md:justify-center gap-6 sm:gap-10 overflow-x-auto pb-4 mb-8 no-scrollbar scroll-smooth">
           {mainCategories.map((cat) => (
             <button
               key={cat.id}

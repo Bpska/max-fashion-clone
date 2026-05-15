@@ -20,9 +20,9 @@ export function Header() {
   return (
     <div className="sticky top-0 z-50 bg-[#F5F5DC]" style={{ boxShadow: scrolled ? "0 2px 8px rgba(0,0,0,0.1)" : "none", transition: "box-shadow 0.2s" }}>
       <div className="border-b" style={{ borderColor: "#E0E0E0" }}>
-        <div className="max-container h-20 flex items-center justify-between gap-4">
+        <div className="max-container h-16 md:h-20 flex items-center justify-between gap-4">
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="Rhodium" className="h-14 w-auto object-contain" />
+            <img src={logo} alt="Rhodium" className="h-10 md:h-14 w-auto object-contain" />
           </Link>
 
           <div className="hidden md:flex items-center flex-1 max-w-[420px] mx-8 h-10 px-3 rounded-sm" style={{ background: "#F5F5F5", border: "1px solid #E0E0E0" }}>

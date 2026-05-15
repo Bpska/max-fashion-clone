@@ -23,11 +23,15 @@ function FilterGroup({ title, children }: { title: string; children: React.React
   );
 }
 
-export function CategoryView({ title, breadcrumb }: { title: string; breadcrumb: string }) {
+export function CategoryView({ title, breadcrumb, category }: { title: string; breadcrumb: string; category?: string }) {
   const [sort, setSort] = useState("Recommended");
   const [selectedSizes, setSelectedSizes] = useState<string[]>([]);
 
-  const sorted = [...products].sort((a, b) => {
+  const filteredProducts = category 
+    ? products.filter(p => p.category === category)
+    : products;
+
+  const sorted = [...filteredProducts].sort((a, b) => {
     if (sort === "Price: Low to High") return a.price - b.price;
     if (sort === "Price: High to Low") return b.price - a.price;
     if (sort === "Discount") return b.discount - a.discount;
@@ -100,7 +104,11 @@ export function CategoryView({ title, breadcrumb }: { title: string; breadcrumb:
             </div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {sorted.map((p) => <ProductCard key={p.id} product={p} />)}
+            {sorted.map((p, i) => (
+              <div key={p.id} className="fade-in-up" style={{ animationDelay: `${i * 0.1}s` }}>
+                <ProductCard product={p} />
+              </div>
+            ))}
           </div>
         </div>
       </div>

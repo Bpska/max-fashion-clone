@@ -3,6 +3,53 @@ import man2 from "@/image/man_2.jpg";
 import man3 from "@/image/man_3.jpg";
 import man4 from "@/image/man_4.jpg";
 import man5 from "@/image/man_5.jpg";
+import women1 from "@/image/womens/women_1.jpg";
+import women2 from "@/image/womens/women_2.jpg";
+import women3 from "@/image/womens/women_3.jpg";
+import women4 from "@/image/womens/women_4.jpg";
+import women5 from "@/image/womens/women_5.jpg";
+import women6 from "@/image/womens/women_6.jpg";
+import women7 from "@/image/womens/women_7.jpg";
+import women8 from "@/image/womens/women_8.jpg";
+import women9 from "@/image/womens/women_9.jpg";
+import women10 from "@/image/womens/women_10.jpg";
+import women11 from "@/image/womens/women_11.jpg";
+import women12 from "@/image/womens/women_12.jpg";
+import women13 from "@/image/womens/women_13.jpg";
+import women14 from "@/image/womens/women_14.jpg";
+import women15 from "@/image/womens/women_15.jpg";
+import kids1 from "@/image/kids/kids_1.jpg";
+import kids2 from "@/image/kids/kids_2.jpg";
+import kids3 from "@/image/kids/kids_3.jpg";
+import kids4 from "@/image/kids/kids_4.jpg";
+import kids5 from "@/image/kids/kids_5.jpg";
+import kids6 from "@/image/kids/kids_6.jpg";
+import kids7 from "@/image/kids/kids_7.jpg";
+import kids8 from "@/image/kids/kids_8.jpg";
+import kids9 from "@/image/kids/kids_9.jpg";
+import kids10 from "@/image/kids/kids_10.jpg";
+import kids11 from "@/image/kids/kids_11.jpg";
+import kids12 from "@/image/kids/kids_12.jpg";
+import kids13 from "@/image/kids/kids_13.jpg";
+import sports1 from "@/image/Sports wear/sports_1.jpg";
+import sports2 from "@/image/Sports wear/sports_2.jpg";
+import sports3 from "@/image/Sports wear/sports_3.jpg";
+import sports4 from "@/image/Sports wear/sports_4.jpg";
+import sports5 from "@/image/Sports wear/sports_5.jpg";
+import sports6 from "@/image/Sports wear/sports_6.jpg";
+import sports7 from "@/image/Sports wear/sports_7.jpg";
+import sports8 from "@/image/Sports wear/sports_8.jpg";
+import sports9 from "@/image/Sports wear/sports_9.jpg";
+import sports10 from "@/image/Sports wear/sports_10.jpg";
+import sports11 from "@/image/Sports wear/sports_11.jpg";
+import sports12 from "@/image/Sports wear/sports_12.jpg";
+import sports13 from "@/image/Sports wear/sports_13.jpg";
+import sports14 from "@/image/Sports wear/sports_14.jpg";
+import sports15 from "@/image/Sports wear/sports_15.jpg";
+import sports16 from "@/image/Sports wear/sports_16.jpg";
+import sports17 from "@/image/Sports wear/sports_17.jpg";
+import sports18 from "@/image/Sports wear/sports_18.jpg";
+import sports19 from "@/image/Sports wear/sports_19.jpg";
 
 export type Product = {
   id: string;
@@ -13,9 +60,168 @@ export type Product = {
   discount: number;
   badge?: "NEW" | "SALE";
   image: string;
+  category: "Women" | "Men" | "Kids" | "Accessories" | "Sports";
 };
 
 export const products: Product[] = [
+  {
+    id: "w1",
+    name: "One Shoulder Sequin Dress",
+    brand: "Rhodium",
+    price: 2499,
+    mrp: 3999,
+    discount: 37,
+    badge: "NEW",
+    image: women1,
+    category: "Women",
+  },
+  {
+    id: "w2",
+    name: "Dreamy Floral Dress",
+    brand: "Rhodium",
+    price: 1899,
+    mrp: 2999,
+    discount: 36,
+    badge: "SALE",
+    image: women2,
+    category: "Women",
+  },
+  {
+    id: "w3",
+    name: "Dusty Rose Ribbed Knit",
+    brand: "Rhodium",
+    price: 1299,
+    mrp: 1999,
+    discount: 35,
+    image: women3,
+    category: "Women",
+  },
+  {
+    id: "w4",
+    name: "Elegant Pink Gown",
+    brand: "Rhodium",
+    price: 3499,
+    mrp: 5499,
+    discount: 36,
+    badge: "NEW",
+    image: women4,
+    category: "Women",
+  },
+  {
+    id: "w5",
+    name: "Plum Ombre Evening Gown",
+    brand: "Rhodium",
+    price: 4299,
+    mrp: 6999,
+    discount: 38,
+    badge: "SALE",
+    image: women5,
+    category: "Women",
+  },
+  {
+    id: "w6",
+    name: "Floral Summer Dress",
+    brand: "Rhodium",
+    price: 1599,
+    mrp: 2499,
+    discount: 36,
+    image: women6,
+    category: "Women",
+  },
+  {
+    id: "w7",
+    name: "Quiet Luxury Set",
+    brand: "Rhodium",
+    price: 2899,
+    mrp: 4599,
+    discount: 37,
+    badge: "NEW",
+    image: women7,
+    category: "Women",
+  },
+  {
+    id: "w8",
+    name: "Embroidered Kurta",
+    brand: "Rhodium",
+    price: 1299,
+    mrp: 1999,
+    discount: 35,
+    image: women8,
+    category: "Women",
+  },
+  {
+    id: "w9",
+    name: "Silk Blend Saree",
+    brand: "Rhodium",
+    price: 2999,
+    mrp: 4999,
+    discount: 40,
+    badge: "SALE",
+    image: women9,
+    category: "Women",
+  },
+  {
+    id: "w10",
+    name: "Designer Evening Gown",
+    brand: "Rhodium",
+    price: 3899,
+    mrp: 5999,
+    discount: 35,
+    image: women10,
+    category: "Women",
+  },
+  {
+    id: "w11",
+    name: "Chiffon Party Wear",
+    brand: "Rhodium",
+    price: 2199,
+    mrp: 3499,
+    discount: 37,
+    badge: "NEW",
+    image: women11,
+    category: "Women",
+  },
+  {
+    id: "w12",
+    name: "Modern Ethnic Suit",
+    brand: "Rhodium",
+    price: 2699,
+    mrp: 4299,
+    discount: 37,
+    image: women12,
+    category: "Women",
+  },
+  {
+    id: "w13",
+    name: "Casual Boho Dress",
+    brand: "Rhodium",
+    price: 1499,
+    mrp: 2299,
+    discount: 35,
+    image: women13,
+    category: "Women",
+  },
+  {
+    id: "w14",
+    name: "Velvet Occasion Dress",
+    brand: "Rhodium",
+    price: 3299,
+    mrp: 4999,
+    discount: 34,
+    badge: "SALE",
+    image: women14,
+    category: "Women",
+  },
+  {
+    id: "w15",
+    name: "Artistic Print Maxi",
+    brand: "Rhodium",
+    price: 1999,
+    mrp: 2999,
+    discount: 33,
+    image: women15,
+    category: "Women",
+  },
   {
     id: "1",
     name: "Floral Wrap Dress",
@@ -25,6 +231,7 @@ export const products: Product[] = [
     discount: 38,
     badge: "SALE",
     image: "https://picsum.photos/seed/prod1/300/400",
+    category: "Women",
   },
   {
     id: "2",
@@ -35,6 +242,7 @@ export const products: Product[] = [
     discount: 33,
     badge: "NEW",
     image: man1,
+    category: "Men",
   },
   {
     id: "3",
@@ -45,6 +253,7 @@ export const products: Product[] = [
     discount: 35,
     badge: "SALE",
     image: "https://picsum.photos/seed/prod3/300/400",
+    category: "Women",
   },
   {
     id: "4",
@@ -55,6 +264,7 @@ export const products: Product[] = [
     discount: 33,
     badge: "NEW",
     image: man2,
+    category: "Men",
   },
   {
     id: "5",
@@ -65,6 +275,7 @@ export const products: Product[] = [
     discount: 39,
     badge: "SALE",
     image: "https://picsum.photos/seed/prod5/300/400",
+    category: "Women",
   },
   {
     id: "6",
@@ -74,6 +285,7 @@ export const products: Product[] = [
     mrp: 1799,
     discount: 33,
     image: man3,
+    category: "Men",
   },
   {
     id: "7",
@@ -84,6 +296,7 @@ export const products: Product[] = [
     discount: 37,
     badge: "NEW",
     image: "https://picsum.photos/seed/prod7/300/400",
+    category: "Kids",
   },
   {
     id: "8",
@@ -94,6 +307,7 @@ export const products: Product[] = [
     discount: 30,
     badge: "SALE",
     image: "https://picsum.photos/seed/prod8/300/400",
+    category: "Women",
   },
   {
     id: "9",
@@ -104,6 +318,7 @@ export const products: Product[] = [
     discount: 35,
     badge: "NEW",
     image: man4,
+    category: "Men",
   },
   {
     id: "10",
@@ -113,6 +328,7 @@ export const products: Product[] = [
     mrp: 899,
     discount: 33,
     image: "https://picsum.photos/seed/prod10/300/400",
+    category: "Women",
   },
   {
     id: "11",
@@ -123,6 +339,7 @@ export const products: Product[] = [
     discount: 33,
     badge: "NEW",
     image: man5,
+    category: "Men",
   },
   {
     id: "12",
@@ -133,6 +350,344 @@ export const products: Product[] = [
     discount: 35,
     badge: "SALE",
     image: "https://picsum.photos/seed/prod12/300/400",
+    category: "Women",
+  },
+  {
+    id: "k1",
+    name: "Embroidered Palazzo Set",
+    brand: "Rhodium",
+    price: 1299,
+    mrp: 1999,
+    discount: 35,
+    badge: "NEW",
+    image: kids1,
+    category: "Kids",
+  },
+  {
+    id: "k2",
+    name: "Bloom Romance Dress",
+    brand: "Rhodium",
+    price: 899,
+    mrp: 1499,
+    discount: 40,
+    badge: "SALE",
+    image: kids2,
+    category: "Kids",
+  },
+  {
+    id: "k3",
+    name: "Classic Boys Shirt",
+    brand: "Rhodium",
+    price: 599,
+    mrp: 899,
+    discount: 33,
+    image: kids3,
+    category: "Kids",
+  },
+  {
+    id: "k4",
+    name: "Fuchsia Sharara Set",
+    brand: "Rhodium",
+    price: 1599,
+    mrp: 2499,
+    discount: 36,
+    badge: "NEW",
+    image: kids4,
+    category: "Kids",
+  },
+  {
+    id: "k5",
+    name: "Festive Kurta Set",
+    brand: "Rhodium",
+    price: 1399,
+    mrp: 2199,
+    discount: 36,
+    image: kids5,
+    category: "Kids",
+  },
+  {
+    id: "k6",
+    name: "Elegant Tank Dress",
+    brand: "Rhodium",
+    price: 799,
+    mrp: 1199,
+    discount: 33,
+    badge: "SALE",
+    image: kids6,
+    category: "Kids",
+  },
+  {
+    id: "k7",
+    name: "White Co-Ord Set",
+    brand: "Rhodium",
+    price: 1199,
+    mrp: 1799,
+    discount: 33,
+    image: kids7,
+    category: "Kids",
+  },
+  {
+    id: "k8",
+    name: "Baby Girl Floral Dress",
+    brand: "Rhodium",
+    price: 699,
+    mrp: 999,
+    discount: 30,
+    badge: "NEW",
+    image: kids8,
+    category: "Kids",
+  },
+  {
+    id: "k9",
+    name: "Casual Play Suit",
+    brand: "Rhodium",
+    price: 499,
+    mrp: 799,
+    discount: 37,
+    image: kids9,
+    category: "Kids",
+  },
+  {
+    id: "k10",
+    name: "Striped Cotton T-Shirt",
+    brand: "Rhodium",
+    price: 399,
+    mrp: 599,
+    discount: 33,
+    badge: "SALE",
+    image: kids10,
+    category: "Kids",
+  },
+  {
+    id: "k11",
+    name: "Denim Dungarees",
+    brand: "Rhodium",
+    price: 999,
+    mrp: 1499,
+    discount: 33,
+    image: kids11,
+    category: "Kids",
+  },
+  {
+    id: "k12",
+    name: "Summer Design Frock",
+    brand: "Rhodium",
+    price: 849,
+    mrp: 1299,
+    discount: 35,
+    badge: "NEW",
+    image: kids12,
+    category: "Kids",
+  },
+  {
+    id: "k13",
+    name: "Trendy Baby Outfit",
+    brand: "Rhodium",
+    price: 749,
+    mrp: 1099,
+    discount: 32,
+    image: kids13,
+    category: "Kids",
+  },
+  {
+    id: "s1",
+    name: "Quarter Zip Polo Set",
+    brand: "Rhodium Sports",
+    price: 1499,
+    mrp: 2499,
+    discount: 40,
+    badge: "NEW",
+    image: sports1,
+    category: "Sports",
+  },
+  {
+    id: "s2",
+    name: "Colour Block Tracksuit",
+    brand: "Rhodium Sports",
+    price: 2299,
+    mrp: 3499,
+    discount: 34,
+    badge: "SALE",
+    image: sports2,
+    category: "Sports",
+  },
+  {
+    id: "s3",
+    name: "Zip Up Sports Jacket",
+    brand: "Rhodium Sports",
+    price: 1899,
+    mrp: 2999,
+    discount: 36,
+    image: sports3,
+    category: "Sports",
+  },
+  {
+    id: "s4",
+    name: "Solid Color Tank Top",
+    brand: "Rhodium Sports",
+    price: 599,
+    mrp: 999,
+    discount: 40,
+    badge: "NEW",
+    image: sports4,
+    category: "Sports",
+  },
+  {
+    id: "s5",
+    name: "Active Training Jacket",
+    brand: "Rhodium Sports",
+    price: 1699,
+    mrp: 2699,
+    discount: 37,
+    image: sports5,
+    category: "Sports",
+  },
+  {
+    id: "s6",
+    name: "Quick Dry Athletic Shorts",
+    brand: "Rhodium Sports",
+    price: 899,
+    mrp: 1499,
+    discount: 40,
+    badge: "SALE",
+    image: sports6,
+    category: "Sports",
+  },
+  {
+    id: "s7",
+    name: "Basketball Jersey",
+    brand: "Rhodium Sports",
+    price: 1199,
+    mrp: 1799,
+    discount: 33,
+    image: sports7,
+    category: "Sports",
+  },
+  {
+    id: "s8",
+    name: "Performance Track Pant",
+    brand: "Rhodium Sports",
+    price: 1299,
+    mrp: 1999,
+    discount: 35,
+    badge: "NEW",
+    image: sports8,
+    category: "Sports",
+  },
+  {
+    id: "s9",
+    name: "Compression Tights",
+    brand: "Rhodium Sports",
+    price: 999,
+    mrp: 1499,
+    discount: 33,
+    image: sports9,
+    category: "Sports",
+  },
+  {
+    id: "s10",
+    name: "Reflective Running Vest",
+    brand: "Rhodium Sports",
+    price: 799,
+    mrp: 1299,
+    discount: 38,
+    badge: "SALE",
+    image: sports10,
+    category: "Sports",
+  },
+  {
+    id: "s11",
+    name: "Breathable Mesh Tee",
+    brand: "Rhodium Sports",
+    price: 649,
+    mrp: 999,
+    discount: 35,
+    image: sports11,
+    category: "Sports",
+  },
+  {
+    id: "s12",
+    name: "High Intensity Sports Bra",
+    brand: "Rhodium Sports",
+    price: 849,
+    mrp: 1299,
+    discount: 35,
+    badge: "NEW",
+    image: sports12,
+    category: "Sports",
+  },
+  {
+    id: "s13",
+    name: "Lightweight Windbreaker",
+    brand: "Rhodium Sports",
+    price: 1999,
+    mrp: 2999,
+    discount: 33,
+    image: sports13,
+    category: "Sports",
+  },
+  {
+    id: "s14",
+    name: "Seamless Workout Leggings",
+    brand: "Rhodium Sports",
+    price: 1249,
+    mrp: 1899,
+    discount: 34,
+    badge: "SALE",
+    image: sports14,
+    category: "Sports",
+  },
+  {
+    id: "s15",
+    name: "Elite Training Hoodie",
+    brand: "Rhodium Sports",
+    price: 2199,
+    mrp: 3499,
+    discount: 37,
+    image: sports15,
+    category: "Sports",
+  },
+  {
+    id: "s16",
+    name: "Sweat-Wicking Headband",
+    brand: "Rhodium Sports",
+    price: 299,
+    mrp: 499,
+    discount: 40,
+    image: sports16,
+    category: "Sports",
+  },
+  {
+    id: "s17",
+    name: "Durable Gym Bag",
+    brand: "Rhodium Sports",
+    price: 1599,
+    mrp: 2499,
+    discount: 36,
+    badge: "NEW",
+    image: sports17,
+    category: "Sports",
+  },
+  {
+    id: "s18",
+    name: "Ankle Support Socks",
+    brand: "Rhodium Sports",
+    price: 399,
+    mrp: 599,
+    discount: 33,
+    image: sports18,
+    category: "Sports",
+  },
+  {
+    id: "s19",
+    name: "High Waist Leggings Set",
+    brand: "Rhodium Sports",
+    price: 2499,
+    mrp: 3999,
+    discount: 37,
+    badge: "SALE",
+    image: sports19,
+    category: "Sports",
   },
 ];
 

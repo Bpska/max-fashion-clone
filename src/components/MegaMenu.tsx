@@ -1,12 +1,14 @@
 import { Link } from "@tanstack/react-router";
 import { useState, useRef } from "react";
+import { X, ChevronDown } from "lucide-react";
 
-type MenuKey = "KIDS WEAR" | "LADIES WEAR" | "MENS WEAR" | "LADIES INNER WEAR" | "SAREES";
+type MenuKey = "KIDS WEAR" | "LADIES WEAR" | "MENS WEAR" | "LADIES INNER WEAR" | "SAREES" | "SPORTS WEAR";
 
 const menuItems: { key: MenuKey; to: string }[] = [
   { key: "KIDS WEAR", to: "/kids" },
   { key: "LADIES WEAR", to: "/women" },
   { key: "MENS WEAR", to: "/men" },
+  { key: "SPORTS WEAR", to: "/sports" },
   { key: "LADIES INNER WEAR", to: "/women" },
   { key: "SAREES", to: "/women" },
 ];
@@ -40,6 +42,11 @@ const dropdowns: Partial<Record<MenuKey, { title: string; links: string[] }[]>> 
     { title: "Silk Sarees", links: ["Banarasi", "Kanjivaram", "Art Silk", "Georgette"] },
     { title: "Printed Sarees", links: ["Digital Print", "Block Print", "Floral", "Geometric"] },
     { title: "Party Wear", links: ["Designer", "Embellished", "Embroidered", "Sequin"] },
+  ],
+  "SPORTS WEAR": [
+    { title: "Men's Sports", links: ["Tracksuits", "Shorts", "Tees", "Jackets"] },
+    { title: "Women's Sports", links: ["Leggings", "Sports Bras", "Tanks", "Co-ords"] },
+    { title: "Accessories", links: ["Gym Bags", "Socks", "Headbands", "Equipment"] },
   ],
 };
 
@@ -96,12 +103,56 @@ export function MegaMenu({ mobileOpen, onClose }: { mobileOpen: boolean; onClose
         )}
       </nav>
 
+      {/* Mobile Drawer */}
       {mobileOpen && (
-        <div className="md:hidden border-b bg-white" style={{ borderColor: "#E0E0E0" }}>
-          <div className="flex flex-col py-2">
-            {menuItems.map((item) => (
-              <Link key={item.key} to={item.to} onClick={onClose} className="nav-item px-4 py-3 border-b" style={{ borderColor: "#E0E0E0" }}>{item.key}</Link>
-            ))}
+        <div className="fixed inset-0 z-[100] md:hidden">
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
+          
+          {/* Menu Panel */}
+          <div className="absolute top-0 left-0 bottom-0 w-[280px] bg-white shadow-2xl animate-in slide-in-from-left duration-300">
+            <div className="p-6 border-b flex items-center justify-between" style={{ background: "#F5F5DC" }}>
+              <span className="font-bold text-sm tracking-widest uppercase">Menu</span>
+              <button onClick={onClose} className="p-1"><X size={20} /></button>
+            </div>
+            
+            <div className="py-4 overflow-y-auto h-full">
+              {menuItems.map((item) => (
+                <div key={item.key}>
+                  <button 
+                    onClick={() => setActive(active === item.key ? null : item.key)}
+                    className="w-full flex items-center justify-between px-6 py-4 border-b text-[13px] font-bold uppercase tracking-wide"
+                    style={{ borderColor: "#F5F5F5" }}
+                  >
+                    {item.key}
+                    <ChevronDown size={16} className={`transition-transform ${active === item.key ? 'rotate-180' : ''}`} />
+                  </button>
+                  
+                  {active === item.key && dropdowns[item.key] && (
+                    <div className="bg-[#FAFAFA] py-2">
+                      {dropdowns[item.key]!.map((group) => (
+                        <div key={group.title} className="px-8 py-2">
+                          <p className="text-[11px] font-bold text-[#888] uppercase mb-1">{group.title}</p>
+                          <ul className="space-y-2 ml-2">
+                            {group.links.map((l) => (
+                              <li key={l}>
+                                <Link 
+                                  to={item.to} 
+                                  onClick={onClose}
+                                  className="text-[12px] text-[#444] block py-1"
+                                >
+                                  {l}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       )}

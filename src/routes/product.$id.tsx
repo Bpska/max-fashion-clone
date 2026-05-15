@@ -70,15 +70,18 @@ function ProductPage() {
   const [color, setColor] = useState(swatches[0].n);
   const [qty, setQty] = useState(1);
 
+  const productImages = [p.image, ...mains.slice(1)];
+  const productThumbs = [p.image, ...thumbs.slice(1)];
+
   return (
     <div className="max-container py-6">
       <div className="text-[12px] mb-4" style={{ color: "#888" }}>
-        Home &gt; Women &gt; Dresses &gt; {p.name}
+        Home &gt; {p.category} &gt; {p.name}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
         <div className="flex gap-3">
           <div className="flex flex-col gap-2">
-            {thumbs.map((t, i) => (
+            {productThumbs.map((t, i) => (
               <button
                 key={i}
                 onClick={() => setImgIdx(i)}
@@ -90,7 +93,7 @@ function ProductPage() {
             ))}
           </div>
           <div className="flex-1 overflow-hidden" style={{ maxWidth: 500, height: 660 }}>
-            <img src={mains[imgIdx]} alt={p.name} className="img-cover" />
+            <img src={productImages[imgIdx]} alt={p.name} className="img-cover" />
           </div>
         </div>
 

@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WomenRouteImport } from './routes/women'
 import { Route as WishlistRouteImport } from './routes/wishlist'
+import { Route as SportsRouteImport } from './routes/sports'
 import { Route as SigninRouteImport } from './routes/signin'
 import { Route as SearchRouteImport } from './routes/search'
 import { Route as MenRouteImport } from './routes/men'
@@ -27,6 +28,11 @@ const WomenRoute = WomenRouteImport.update({
 const WishlistRoute = WishlistRouteImport.update({
   id: '/wishlist',
   path: '/wishlist',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SportsRoute = SportsRouteImport.update({
+  id: '/sports',
+  path: '/sports',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SigninRoute = SigninRouteImport.update({
@@ -72,6 +78,7 @@ export interface FileRoutesByFullPath {
   '/men': typeof MenRoute
   '/search': typeof SearchRoute
   '/signin': typeof SigninRoute
+  '/sports': typeof SportsRoute
   '/wishlist': typeof WishlistRoute
   '/women': typeof WomenRoute
   '/product/$id': typeof ProductIdRoute
@@ -83,6 +90,7 @@ export interface FileRoutesByTo {
   '/men': typeof MenRoute
   '/search': typeof SearchRoute
   '/signin': typeof SigninRoute
+  '/sports': typeof SportsRoute
   '/wishlist': typeof WishlistRoute
   '/women': typeof WomenRoute
   '/product/$id': typeof ProductIdRoute
@@ -95,6 +103,7 @@ export interface FileRoutesById {
   '/men': typeof MenRoute
   '/search': typeof SearchRoute
   '/signin': typeof SigninRoute
+  '/sports': typeof SportsRoute
   '/wishlist': typeof WishlistRoute
   '/women': typeof WomenRoute
   '/product/$id': typeof ProductIdRoute
@@ -108,6 +117,7 @@ export interface FileRouteTypes {
     | '/men'
     | '/search'
     | '/signin'
+    | '/sports'
     | '/wishlist'
     | '/women'
     | '/product/$id'
@@ -119,6 +129,7 @@ export interface FileRouteTypes {
     | '/men'
     | '/search'
     | '/signin'
+    | '/sports'
     | '/wishlist'
     | '/women'
     | '/product/$id'
@@ -130,6 +141,7 @@ export interface FileRouteTypes {
     | '/men'
     | '/search'
     | '/signin'
+    | '/sports'
     | '/wishlist'
     | '/women'
     | '/product/$id'
@@ -142,6 +154,7 @@ export interface RootRouteChildren {
   MenRoute: typeof MenRoute
   SearchRoute: typeof SearchRoute
   SigninRoute: typeof SigninRoute
+  SportsRoute: typeof SportsRoute
   WishlistRoute: typeof WishlistRoute
   WomenRoute: typeof WomenRoute
   ProductIdRoute: typeof ProductIdRoute
@@ -161,6 +174,13 @@ declare module '@tanstack/react-router' {
       path: '/wishlist'
       fullPath: '/wishlist'
       preLoaderRoute: typeof WishlistRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sports': {
+      id: '/sports'
+      path: '/sports'
+      fullPath: '/sports'
+      preLoaderRoute: typeof SportsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/signin': {
@@ -222,6 +242,7 @@ const rootRouteChildren: RootRouteChildren = {
   MenRoute: MenRoute,
   SearchRoute: SearchRoute,
   SigninRoute: SigninRoute,
+  SportsRoute: SportsRoute,
   WishlistRoute: WishlistRoute,
   WomenRoute: WomenRoute,
   ProductIdRoute: ProductIdRoute,

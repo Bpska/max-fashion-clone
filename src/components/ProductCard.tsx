@@ -8,7 +8,7 @@ export function ProductCard({ product, showMoveToCart }: { product: Product; sho
   const liked = inWishlist(product.id);
 
   return (
-    <div className="group flex flex-col relative cursor-pointer font-sans">
+    <div className="group flex flex-col relative cursor-pointer font-sans transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-2 rounded-lg">
       {/* Image Section */}
       <div className="relative overflow-hidden" style={{ aspectRatio: "3/4" }}>
         <Link to="/product/$id" params={{ id: product.id }} className="block w-full h-full bg-[#f7f7f7]">
