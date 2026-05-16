@@ -111,35 +111,35 @@ export function MegaMenu({ mobileOpen, onClose }: { mobileOpen: boolean; onClose
           
           {/* Menu Panel */}
           <div className="absolute top-0 left-0 bottom-0 w-[280px] bg-white shadow-2xl animate-in slide-in-from-left duration-300">
-            <div className="p-6 border-b flex items-center justify-between" style={{ background: "#F5F5DC" }}>
-              <span className="font-bold text-sm tracking-widest uppercase">Menu</span>
-              <button onClick={onClose} className="p-1"><X size={20} /></button>
+            <div className="p-6 border-b flex items-center justify-between" style={{ background: "#091F13" }}>
+              <span className="font-bold text-sm tracking-widest uppercase text-[#B8933E]">Menu</span>
+              <button onClick={onClose} className="p-1 text-[#B8933E]"><X size={20} /></button>
             </div>
             
-            <div className="py-4 overflow-y-auto h-full">
+            <div className="py-4 overflow-y-auto h-[calc(100%-80px)]">
               {menuItems.map((item) => (
                 <div key={item.key}>
                   <button 
                     onClick={() => setActive(active === item.key ? null : item.key)}
-                    className="w-full flex items-center justify-between px-6 py-4 border-b text-[13px] font-bold uppercase tracking-wide"
+                    className="w-full flex items-center justify-between px-6 py-4 border-b text-[13px] font-bold uppercase tracking-wide text-[#091F13]"
                     style={{ borderColor: "#F5F5F5" }}
                   >
                     {item.key}
-                    <ChevronDown size={16} className={`transition-transform ${active === item.key ? 'rotate-180' : ''}`} />
+                    <ChevronDown size={16} className={`transition-transform ${active === item.key ? 'rotate-180 text-[#B8933E]' : ''}`} />
                   </button>
                   
                   {active === item.key && dropdowns[item.key] && (
-                    <div className="bg-[#FAFAFA] py-2">
+                    <div className="bg-[#F9F9F9] py-2">
                       {dropdowns[item.key]!.map((group) => (
                         <div key={group.title} className="px-8 py-2">
-                          <p className="text-[11px] font-bold text-[#888] uppercase mb-1">{group.title}</p>
+                          <p className="text-[11px] font-bold text-[#B8933E] uppercase mb-2">{group.title}</p>
                           <ul className="space-y-2 ml-2">
                             {group.links.map((l) => (
                               <li key={l}>
                                 <Link 
                                   to={item.to} 
                                   onClick={onClose}
-                                  className="text-[12px] text-[#444] block py-1"
+                                  className="text-[13px] text-[#091F13] block py-1.5 border-b border-transparent hover:border-[#B8933E] transition-all"
                                 >
                                   {l}
                                 </Link>
